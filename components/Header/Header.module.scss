@@ -1,0 +1,18 @@
+@import '../../styles/colors';
+
+.header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: $pink;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    & p{
+        color: $white;
+    }
+}

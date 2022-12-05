@@ -1,0 +1,97 @@
+.container {
+    position: relative;
+  }
+.form_control {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    z-index: 1;
+    border-bottom: 1px solid #EDE4E8;
+
+    & input {
+        padding: 28px 16px 9px 0;
+        border: none;
+        border-radius: 8px;
+        color: #1e232a;
+        resize: none;
+        display: block;
+        outline: none;
+        width: 100%;
+        background: transparent;
+        -moz-appearance: textfield;
+
+        & ::-webkit-outer-spin-button,
+        .form_control input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+    & label {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 18px;
+        color: #A79CA0;
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+        touch-action: none;
+        z-index: -1;
+      }
+}
+
+  .form_error {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    & input {
+        padding: 28px 0 9px 16px;
+    }
+  }
+  
+  .form_control 
+  .form_disabled input {
+    background: #f2f3f5;
+    border-color: transparent;
+    cursor: default;
+  }
+  
+  input.password {
+    padding-right: 52px;
+  }
+  
+  .form_control input:valid + label,
+  .form_control input:focus + label,
+  .form_control input:disabled + label {
+    top: 6px;
+    font-size: 12px;
+  }
+  
+  .form_error
+  .form_disabled label {
+    z-index: 1;
+  }
+  
+  .star {
+    color: #B79BA6;
+    margin-left: 5px;
+  }
+  .error_message {
+    color: #db2365;
+    margin-left: 5px;
+    margin-top: 4px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    white-space: normal;
+  }
+    
+  @media (max-width: 720px) {
+    .form_control label {
+      line-height: 19px;
+      color: #969da4;
+    }
+  }
+  

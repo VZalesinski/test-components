@@ -1,0 +1,15 @@
+.form{
+     padding: 20px;
+    background: rgba(255, 255, 255, 0.01);
+    border-radius: 12px; 
+    border: 1px solid #EDE4E8;
+
+    &:hover,
+    &:active{
+        box-shadow: inset 0px -1px 0px #E9E3E5;
+    }
+
+    &:has(input:focus){
+        box-shadow: inset 0px -1px 0px #E9E3E5;        
+    }
+}

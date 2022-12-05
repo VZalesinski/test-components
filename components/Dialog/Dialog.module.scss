@@ -1,0 +1,66 @@
+@import '../../styles/colors';
+
+.wrapper {
+    padding: 20px 40px;
+    width: 500px;
+    background: #F9F9F9;
+    box-shadow: 7px 7px 20px 10px rgba(46, 103, 140, 0.2), 0px 6px 60px rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+}
+
+.title {
+    margin-bottom: 25px;
+}
+
+.grid {
+    margin: 0 auto 25px;
+    max-width: 370px;
+    display: grid;
+    justify-content: space-between;
+    justify-items: center;
+    gap: 10px 50px;
+    grid-template-columns: auto auto ;
+}
+
+.wrapper__button{
+    width: 130px;
+}
+
+.button {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
+    &:hover{
+        cursor: pointer;
+    }
+    & span{
+        color: $pink;
+    }
+    & .img{
+        width: 12px;
+        height: 12px;
+        &+span{
+            margin-left: 5px;
+        }
+    }
+}
+
+.active {
+    box-shadow: none;
+    background-color: palevioletred;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    .button{
+    &:active{
+        box-shadow: none;
+        
+    }}
+}

@@ -1,0 +1,23 @@
+.wrapper {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.block{
+    margin: 15px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap:nowrap;
+}
+
+.form__wrapper {
+    width: 400px;
+}
+
+.marginTop{
+    margin-top: 20px;
+}

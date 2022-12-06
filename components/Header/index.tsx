@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import style from './Header.module.scss';
 import Link from 'next/link';
 import Button from '../Button';
@@ -5,7 +6,7 @@ import Chip from '../Chip';
 
 import linkedIn from '../../assets/icons/linkedIn.svg';
 
-const Header = () => {
+const Header: FC = () => {
   return (
     <header className={style.header}>
       <div className={style.block}>

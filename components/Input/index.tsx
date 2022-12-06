@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import style from './Input.module.scss';
+import { GetType, InputPropsType } from './types';
 
-const Input = React.forwardRef(
+const Input: FC<InputPropsType> = React.forwardRef(
   (
     {
       value,
@@ -18,12 +19,11 @@ const Input = React.forwardRef(
       error = '',
       disabled = false,
       greyBg = false,
-      styles = null,
       ...props
     },
     ref
   ) => {
-    const [isRevealPwd, setIsRevealPwd] = useState(false);
+    const [isRevealPwd, setIsRevealPwd] = useState<boolean>(false);
 
     const handleChange = e => {
       const value = e.target.value;
@@ -72,7 +72,7 @@ const Input = React.forwardRef(
       }
     };
 
-    const getType = type => (type === 'number' ? 'tel' : type);
+    const getType: GetType = type => (type === 'number' ? 'tel' : type);
 
     const styleOut = { width: width, height: height };
     const star = !required ? '' : '*';
@@ -87,7 +87,6 @@ const Input = React.forwardRef(
       >
         <div className={style.container}>
           <input
-            ref={ref}
             value={value}
             onChange={handleChange}
             type={
@@ -95,7 +94,6 @@ const Input = React.forwardRef(
             }
             className={isPassword ? style.password : undefined}
             required
-            style={styles}
             disabled={disabled}
             {...props}
           />

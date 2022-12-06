@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import style from './HomePage.module.scss';
 import Header from '../components/Header';
 
-const HomePage = () => {
+const HomePage: FC = () => {
   return (
     <>
       <Header />

@@ -1,7 +1,9 @@
+import { FC } from 'react';
 import Switch from 'react-switch';
 import style from './Toggle.module.scss';
+import { TogglePropsType } from './types';
 
-const Toggle = ({ text, checked, setChecked }) => {
+const Toggle: FC<TogglePropsType> = ({ text, checked, setChecked }) => {
   return (
     <label className={style.label}>
       <span className={style.span}>{text}</span>

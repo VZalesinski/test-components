@@ -1,7 +1,14 @@
-import React, { useId } from 'react';
+import React, { FC, useId } from 'react';
 import style from './Checkbox.module.scss';
+import { CheckboxPropsType } from './types';
 
-const Checkbox = ({ label, children, disabled, checked, setChecked }) => {
+const Checkbox: FC<CheckboxPropsType> = ({
+  label,
+  children,
+  disabled,
+  checked,
+  setChecked
+}) => {
   const id = useId();
   return (
     <div className={style.container}>

@@ -1,24 +1,25 @@
+import { FC } from 'react';
 import Image from 'next/image';
 import style from './Button.module.scss';
+import { ButtonPropsType, ButtonStylesOutType } from './types';
 
-const Button = ({
+const Button: FC<ButtonPropsType> = ({
   text,
-  disable = false,
-  colorsPalette = null,
+  disable,
+  colorsPalette,
   handler,
-  size = null,
-  iconLeft = null,
-  iconRight = null,
-  outlined = false,
-  round = false,
+  size,
+  iconLeft,
+  iconRight,
+  outlined,
+  round,
   small
 }) => {
-  function stylesOut() {
+  function stylesOut(): ButtonStylesOutType {
     let st = Object.assign({}, size, colorsPalette);
     return st;
   }
-
-  function classOut() {
+  function classOut(): string {
     let st = [style.btn];
     outlined ? st.push(style.outlined) : st.push(style.main);
     if (disable) st.push(style.disable);
@@ -31,7 +32,7 @@ const Button = ({
   return (
     <button
       style={stylesOut()}
-      onClick={!disable ? handler : null}
+      onClick={!disable && handler ? handler : null}
       className={classOut()}
     >
       {iconLeft && (

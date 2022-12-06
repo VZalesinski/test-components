@@ -1,14 +1,15 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import style from './Card.module.scss';
 import Toggle from '../../components/Toggle';
 import Checkbox from '../../components/Checkbox';
 import Input from '../../components/Input';
+import { CardPropsType } from './types';
 
-const Card = ({ maxWidth }) => {
-  const [checked, setChecked] = useState(false);
-  const [checked2, setChecked2] = useState(false);
-  const [checked3, setChecked3] = useState(false);
-  const [checked4, setChecked4] = useState(false);
+const Card: FC<CardPropsType> = ({ maxWidth }) => {
+  const [checked, setChecked] = useState<boolean>(false);
+  const [checked2, setChecked2] = useState<boolean>(false);
+  const [checked3, setChecked3] = useState<boolean>(false);
+  const [checked4, setChecked4] = useState<boolean>(false);
 
   return (
     <div style={{ maxWidth: maxWidth }} className={style.wrapper}>

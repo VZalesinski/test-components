@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import style from './ComponentsPage.module.scss';
 import Button from '../../components/Button';
 import Form from '../../components/Form';
@@ -9,16 +9,16 @@ import Chip from '../../components/Chip';
 import Dialog from '../../components/Dialog';
 import Header from '../../components/Header';
 import Input from '../../components/Input';
-import { COLORS } from '../../utils';
+import { COLORS } from '../../utils/index';
 
 import geoIcon from '../../assets/icons/geo.svg';
 import Linkedin from '../../assets/icons/linkedIn.svg';
 
-const ComponentsPage = () => {
-  const [checked1, setChecked1] = useState(false);
-  const [checked2, setChecked2] = useState(false);
-  const [checked3, setChecked3] = useState(false);
-  const [checked4, setChecked4] = useState(false);
+const ComponentsPage: FC = () => {
+  const [checked1, setChecked1] = useState<boolean>(false);
+  const [checked2, setChecked2] = useState<boolean>(false);
+  const [checked3, setChecked3] = useState<boolean>(false);
+  const [checked4, setChecked4] = useState<boolean>(false);
   return (
     <>
       <Header />
@@ -26,9 +26,13 @@ const ComponentsPage = () => {
         <h2>Components page</h2>
         <p>Just a simple page where I was building all components</p>
         <p> Buttons</p>
-        <Button text="кнопка 1" size={{ width: 200, height: 50 }} />
+        <Button text="кнопка 1" size={{ width: '200px', height: '50px' }} />
 
-        <Button text="кнопка 2" disable size={{ width: 200, height: 50 }} />
+        <Button
+          text="кнопка 2"
+          disable
+          size={{ width: '200px', height: '50px' }}
+        />
 
         <Button
           text="кнопка 3"

@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { FC } from 'react';
 import style from './Dialog.module.scss';
+import { DialogPropsType } from './type';
 
-const Dialog = ({ collection, title }) => {
+const Dialog: FC<DialogPropsType> = ({ collection, title }) => {
   return (
     <div className={style.wrapper}>
       <p className={style.title}>{title}</p>
@@ -15,7 +16,7 @@ const Dialog = ({ collection, title }) => {
             key={index}
             onClick={() => item.setActive(!item.active)}
           >
-            {item.img && <Image src={item.img} className={style.img} />}
+            {item.img && <Image src={item.img} className={style.img} alt="" />}
             {item.text && <span>{item.text}</span>}
           </button>
         ))}
